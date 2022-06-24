@@ -6,7 +6,6 @@ namespace Linear_and_Binary_Search_App
 {
     public partial class Form1 : Form
     {
-        private object arrayOfInts;
 
         public Form1()
         {
@@ -16,7 +15,7 @@ namespace Linear_and_Binary_Search_App
         // Array TextBox
         private void ArrayTextBox_TextChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         // Set Up Button
@@ -24,7 +23,7 @@ namespace Linear_and_Binary_Search_App
         {
             string value = ArrayTextBox.Text;
             int n;
- 
+
             if (!Int32.TryParse(ArrayTextBox.Text, out n))
             {
                 MessageBox.Show("Please enter a valid integer");
@@ -41,12 +40,17 @@ namespace Linear_and_Binary_Search_App
 
             for (int i = 0; i < n; i++)
             {
-                int randNum = random.Next(0, 10*n);
+                int randNum = random.Next(0, 10 * n);
                 arrayOfInts[i] = randNum;
             }
-            
+
             lblArray.Text = String.Join(", ", arrayOfInts);
-           
+
+        }
+        // Getting the return value of the label array textbox so i can use it in linear button click function
+        public string getArray()
+        {
+            return lblArray.Text;
         }
 
 
@@ -57,11 +61,16 @@ namespace Linear_and_Binary_Search_App
         /(going through the array with a loop)
         /and prints out if it is found or not.
         */
-       
+
         public void LinearBtn_Click(object sender, EventArgs e)
         {
             string value = NumberTextBox.Text;
+            int value2 = Convert.ToInt32(NumberTextBox.Text);
             int num;
+            string arrayOfString = getArray();
+
+            //string s1 = "1;2;3;4;5;6;7;8;9;10;11;12";
+            int[] arrayOfInts = arrayOfString.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
 
             if (!Int32.TryParse(NumberTextBox.Text, out num))
             {
@@ -69,15 +78,28 @@ namespace Linear_and_Binary_Search_App
                 NumberTextBox.Text = "";
             }
 
-            foreach (int element in arrayOfInts)
+            for (int i = 0; i < arrayOfInts.Length - 1; i++)
             {
-                if (element = NumberTextBox.Text)
+                if (arrayOfInts[i] == value2)
                 {
-                    num = element;
+                    num = i;
+
+                    lblArray.Text = "";
+                    lblArray.Text = String.Join(",", arrayOfInts[i]);
+                    lblArray.Text = "You Found" + ' ' + lblArray.Text;
                 }
+                else
+                    lblArray.Text = "Not Found";
             }
-       
-     
+
+
+        }
+
+        // Set up binary search next
+
+        private void BinaryBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

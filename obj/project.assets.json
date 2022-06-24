@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\megan\\OneDrive\\Documents\\C#\\Projects\\Linear and Binary Search App\\Linear and Binary Search App.csproj",
+      "projectUniqueName": "C:\\Users\\megan\\OneDrive\\Documents\\Data Structures and Algorithms\\Linear and Binary Search App\\Linear and Binary Search App.csproj",
       "projectName": "Linear and Binary Search App",
-      "projectPath": "C:\\Users\\megan\\OneDrive\\Documents\\C#\\Projects\\Linear and Binary Search App\\Linear and Binary Search App.csproj",
+      "projectPath": "C:\\Users\\megan\\OneDrive\\Documents\\Data Structures and Algorithms\\Linear and Binary Search App\\Linear and Binary Search App.csproj",
       "packagesPath": "C:\\Users\\megan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\megan\\OneDrive\\Documents\\C#\\Projects\\Linear and Binary Search App\\obj\\",
+      "outputPath": "C:\\Users\\megan\\OneDrive\\Documents\\Data Structures and Algorithms\\Linear and Binary Search App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,7 +68,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

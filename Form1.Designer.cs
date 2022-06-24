@@ -60,6 +60,7 @@
             this.BinaryBtn.TabIndex = 6;
             this.BinaryBtn.Text = "Binary Search";
             this.BinaryBtn.UseVisualStyleBackColor = false;
+            this.BinaryBtn.Click += new System.EventHandler(this.BinaryBtn_Click);
             // 
             // ArraySizeLabel
             // 

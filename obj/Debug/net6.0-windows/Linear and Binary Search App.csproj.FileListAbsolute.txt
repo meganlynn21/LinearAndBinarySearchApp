@@ -15,3 +15,20 @@ C:\Users\megan\OneDrive\Documents\C#\Projects\Linear and Binary Search App\obj\D
 C:\Users\megan\OneDrive\Documents\C#\Projects\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.pdb
 C:\Users\megan\OneDrive\Documents\C#\Projects\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.genruntimeconfig.cache
 C:\Users\megan\OneDrive\Documents\C#\Projects\Linear and Binary Search App\obj\Debug\net6.0-windows\ref\Linear and Binary Search App.dll
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.csproj.AssemblyReference.cache
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear_and_Binary_Search_App.Form1.resources
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.csproj.GenerateResource.cache
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.AssemblyInfoInputs.cache
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.AssemblyInfo.cs
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.csproj.CoreCompileInputs.cache
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.dll
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\refint\Linear and Binary Search App.dll
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.pdb
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\bin\Debug\net6.0-windows\Linear and Binary Search App.exe
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\bin\Debug\net6.0-windows\Linear and Binary Search App.deps.json
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\bin\Debug\net6.0-windows\Linear and Binary Search App.runtimeconfig.json
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\bin\Debug\net6.0-windows\Linear and Binary Search App.dll
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\bin\Debug\net6.0-windows\Linear and Binary Search App.pdb
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\Linear and Binary Search App.genruntimeconfig.cache
+C:\Users\megan\OneDrive\Documents\Data Structures and Algorithms\Linear and Binary Search App\obj\Debug\net6.0-windows\ref\Linear and Binary Search App.dll
