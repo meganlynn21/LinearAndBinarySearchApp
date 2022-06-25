@@ -65,33 +65,45 @@ namespace Linear_and_Binary_Search_App
         public void LinearBtn_Click(object sender, EventArgs e)
         {
             string value = NumberTextBox.Text;
-            int value2 = Convert.ToInt32(NumberTextBox.Text);
             int num;
-            string arrayOfString = getArray();
 
-            //string s1 = "1;2;3;4;5;6;7;8;9;10;11;12";
-            int[] arrayOfInts = arrayOfString.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
-
-            if (!Int32.TryParse(NumberTextBox.Text, out num))
+            if (!Int32.TryParse(value, out num))
             {
                 MessageBox.Show("Please enter a valid integer");
                 NumberTextBox.Text = "";
             }
 
-            for (int i = 0; i < arrayOfInts.Length - 1; i++)
+            bool success = Int32.TryParse(NumberTextBox.Text, out num);
+            string arrayOfString = getArray();
+            try
             {
-                if (arrayOfInts[i] == value2)
+                int[] arrayOfInts = arrayOfString.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
+
+                if (success == true)
                 {
-                    num = i;
 
-                    lblArray.Text = "";
-                    lblArray.Text = String.Join(",", arrayOfInts[i]);
-                    lblArray.Text = "You Found" + ' ' + lblArray.Text;
+                    int value2 = Convert.ToInt32(NumberTextBox.Text);
+
+                    for (int i = 0; i < arrayOfInts.Length; i++)
+                    {
+                        if (arrayOfInts[i] == value2)
+                        {
+                            lblArray.Text = String.Join(",", arrayOfInts[i]);
+                            lblArray.Text = "You Found" + ' ' + lblArray.Text;
+                            NumberTextBox.Text = "";
+                            ArrayTextBox.Text = "";
+
+                            return;
+                        }
+                    }
+                    
                 }
-                else
-                    lblArray.Text = "Not Found";
+                lblArray.Text = "Not Found";
             }
+            catch (FormatException)
+            {
 
+            }
 
         }
 
