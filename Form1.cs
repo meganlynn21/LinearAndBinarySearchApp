@@ -24,20 +24,17 @@ namespace Linear_and_Binary_Search_App
             string value = ArrayTextBox.Text;
             int n;
 
+            // Error handling
             if (!Int32.TryParse(ArrayTextBox.Text, out n))
             {
                 MessageBox.Show("Please enter a valid integer");
                 ArrayTextBox.Text = "";
             }
-            //Create an array using the number the user types in as the size of the array. 
-
+            //Creating an array using the number the user types in as the size of the array.
             int[] arrayOfInts = new int[n];
-            /* Use a for loop to go through the array
-              and put in random numbers between 0 and 10 * n.
-            Print out the array with a loop to make sure it works. 
-            */
             Random random = new Random();
 
+            // Using a for loop to go through the array and put in random numbers between 0 and 10 * n.
             for (int i = 0; i < n; i++)
             {
                 int randNum = random.Next(0, 10 * n);
@@ -45,27 +42,21 @@ namespace Linear_and_Binary_Search_App
             }
 
             lblArray.Text = String.Join(", ", arrayOfInts);
-
         }
-        // Getting the return value of the label array textbox so i can use it in linear button click function
+
+        // Getting the return value of the label ArrayTextbox so we can use it in linear button click function
         public string getArray()
         {
             return lblArray.Text;
         }
 
-
-        /*
-         * Ask the user for a number to search for.
-         * Write and call a linear search function that
-        /searches for the number in the array
-        /(going through the array with a loop)
-        /and prints out if it is found or not.
-        */
-
+        // Linear Search Button
+        //The Big O notation for Linear Search is O(N)
         public void LinearBtn_Click(object sender, EventArgs e)
         {
             string value = NumberTextBox.Text;
             int num;
+            int count = 0;
 
             if (!Int32.TryParse(value, out num))
             {
@@ -82,21 +73,20 @@ namespace Linear_and_Binary_Search_App
                 if (success == true)
                 {
 
-                    int value2 = Convert.ToInt32(NumberTextBox.Text);
+                    int numTextBoxInt = Convert.ToInt32(NumberTextBox.Text);
 
                     for (int i = 0; i < arrayOfInts.Length; i++)
                     {
-                        if (arrayOfInts[i] == value2)
-                        {
-                            lblArray.Text = String.Join(",", arrayOfInts[i]);
-                            lblArray.Text = "You Found" + ' ' + lblArray.Text;
-                            NumberTextBox.Text = "";
-                            ArrayTextBox.Text = "";
+                        count++;
 
+                        if (arrayOfInts[i] == numTextBoxInt)
+                        {
+                            Foundlbl.Text = $"You Found {numTextBoxInt}{'!'}";
+                            lblResult.Text = $"Linear Results: Linear search for {arrayOfInts[i]} took {count} steps";
                             return;
                         }
                     }
-                    
+
                 }
                 lblArray.Text = "Not Found";
             }
@@ -107,11 +97,59 @@ namespace Linear_and_Binary_Search_App
 
         }
 
-        // Set up binary search next
-
+        // Binary Search Button
+        // The Big O notation for Binary Search is O(log N).
         private void BinaryBtn_Click(object sender, EventArgs e)
         {
+            string value = NumberTextBox.Text;
+            int num;
+            int count = 0;
 
+
+            if (!Int32.TryParse(value, out num))
+            {
+                MessageBox.Show("Please enter a valid integer");
+                NumberTextBox.Text = "";
+            }
+
+            bool success = Int32.TryParse(NumberTextBox.Text, out num);
+            string arrayOfString = getArray();
+            try
+            {
+                int[] arrayOfInts = arrayOfString.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
+
+                if (success == true)
+                {
+                    int numTextBoxInt = Convert.ToInt32(NumberTextBox.Text);
+                    int low = 0;
+                    int high = arrayOfInts.Length;
+
+                    Array.Sort(arrayOfInts);
+
+                    while (low < high)
+                    {
+                        count++;
+                        int mid = low + ((high - low) / 2);
+                        if (numTextBoxInt == arrayOfInts[mid])
+                        {
+                            Foundlbl.Text = $"You Found {numTextBoxInt}{'!'}";
+                            Binarylbl.Text = $"Binary Results: Binary search for {numTextBoxInt} took {count} steps";
+                            return;
+                        }
+                        if (numTextBoxInt < arrayOfInts[mid])
+                            high = mid - 1;
+                        else
+                            low = mid + 1;
+                    }
+                }
+
+
+                lblArray.Text = "Not Found";
+            }
+            catch (FormatException)
+            {
+
+            }
         }
     }
 }

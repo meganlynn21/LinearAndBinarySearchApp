@@ -36,6 +36,10 @@
             this.SetUpBtn = new System.Windows.Forms.Button();
             this.SearchForNumLbl = new System.Windows.Forms.Label();
             this.lblArray = new System.Windows.Forms.Label();
+            this.LinearResultsLbl = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.Binarylbl = new System.Windows.Forms.Label();
+            this.Foundlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LinearBtn
@@ -112,10 +116,42 @@
             // lblArray
             // 
             this.lblArray.AutoSize = true;
-            this.lblArray.Location = new System.Drawing.Point(105, 235);
+            this.lblArray.Location = new System.Drawing.Point(112, 236);
             this.lblArray.Name = "lblArray";
             this.lblArray.Size = new System.Drawing.Size(0, 25);
             this.lblArray.TabIndex = 13;
+            // 
+            // LinearResultsLbl
+            // 
+            this.LinearResultsLbl.AutoSize = true;
+            this.LinearResultsLbl.Location = new System.Drawing.Point(116, 270);
+            this.LinearResultsLbl.Name = "LinearResultsLbl";
+            this.LinearResultsLbl.Size = new System.Drawing.Size(0, 25);
+            this.LinearResultsLbl.TabIndex = 14;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(106, 318);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 25);
+            this.lblResult.TabIndex = 15;
+            // 
+            // Binarylbl
+            // 
+            this.Binarylbl.AutoSize = true;
+            this.Binarylbl.Location = new System.Drawing.Point(106, 343);
+            this.Binarylbl.Name = "Binarylbl";
+            this.Binarylbl.Size = new System.Drawing.Size(0, 25);
+            this.Binarylbl.TabIndex = 16;
+            // 
+            // Foundlbl
+            // 
+            this.Foundlbl.AutoSize = true;
+            this.Foundlbl.Location = new System.Drawing.Point(106, 282);
+            this.Foundlbl.Name = "Foundlbl";
+            this.Foundlbl.Size = new System.Drawing.Size(0, 25);
+            this.Foundlbl.TabIndex = 17;
             // 
             // Form1
             // 
@@ -123,6 +159,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(580, 442);
+            this.Controls.Add(this.Foundlbl);
+            this.Controls.Add(this.Binarylbl);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.LinearResultsLbl);
             this.Controls.Add(this.lblArray);
             this.Controls.Add(this.SearchForNumLbl);
             this.Controls.Add(this.SetUpBtn);
@@ -147,5 +187,9 @@
         private Button SetUpBtn;
         private Label SearchForNumLbl;
         private Label lblArray;
+        private Label LinearResultsLbl;
+        private Label lblResult;
+        private Label Binarylbl;
+        private Label Foundlbl;
     }
 }
